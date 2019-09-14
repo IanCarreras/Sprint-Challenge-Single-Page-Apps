@@ -37,3 +37,15 @@ main {
 header h1 {
   text-align: center;
 }
+
+.navlink {
+  color: black;
+  width: 6rem;
+  text-align: center;
+}
+
+.active {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
