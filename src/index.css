@@ -49,3 +49,10 @@ header h1 {
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
+
+section {
+  border: 1px solid black;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+}
