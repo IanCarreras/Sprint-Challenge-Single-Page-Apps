@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components'
 
 const Card = styled.div`
+  margin: 1rem .5rem;
   display: flex;
   flex-direction: column;
   align-content: center;

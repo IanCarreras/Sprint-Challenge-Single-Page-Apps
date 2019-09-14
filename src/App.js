@@ -5,6 +5,7 @@ import TabNav from "./components/TabNav.js"
 import Header from "./components/Header.js"
 import WelcomPage from './components/WelcomePage'
 import CharacterList from './components/CharacterList'
+import LocationList from './components/LocationsList'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <TabNav />
       <Route exact path='/' component={WelcomPage} />
       <Route path='/characters' component={CharacterList} />
+      <Route path='/locations' component={LocationList} />
     </main>
   );
 }
