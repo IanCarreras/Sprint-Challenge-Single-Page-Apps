@@ -19,8 +19,6 @@ export default function CharacterList() {
       })
   }, []);
 
-  console.log(characterList)
-
   return (
     <section>
       {

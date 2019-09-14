@@ -18,8 +18,6 @@ export default function LocationsList() {
           })
       }, []);
 
-    console.log(locationList)
-
     return (
         <section>
             {

@@ -36,12 +36,15 @@ main {
 
 header h1 {
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .navlink {
   color: black;
+  height: 2rem;
   width: 6rem;
   text-align: center;
+  padding-top: .3rem;
 }
 
 .active {
@@ -52,13 +55,13 @@ header h1 {
 
 section {
   border: 1px solid black;
-  border-radius: .5rem;
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
+  padding-bottom: 1.5rem;
 }
 
-.residents {
+.residents, .characters {
   border-radius: 0 0 .5rem 0;
   float: right;
   background-color: rgba(192, 192, 192, 1);

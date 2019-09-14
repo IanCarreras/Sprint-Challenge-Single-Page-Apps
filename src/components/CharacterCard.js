@@ -7,6 +7,7 @@ const Card = styled.div`
   flex-direction: column;
   align-content: center;
   border: 1px solid grey;
+  padding: 1rem;
 `
 
 export default function CharacterCard(props) {
