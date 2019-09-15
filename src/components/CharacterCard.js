@@ -10,10 +10,11 @@ const Card = styled.div`
   border: 1px solid grey;
   border-radius: .5rem;
   padding: 1rem;
+  width: 40%;
 `
 
 export default function CharacterCard(props) {
-  const { id, name, image, location, origin, status } = props
+  const { id, name, image, location, origin, status, episodes } = props
   return (
     <Card>
       <img src={image} alt={`pic of ${name}`} />
@@ -21,7 +22,7 @@ export default function CharacterCard(props) {
       <p>{status}</p>
       <p>Location: {location}</p>
       <p>Origin: {origin}</p>
-      <NavLink to={`/episodes/${id}`}>Episodes</NavLink>
+      <NavLink to={`/episodes/${id}`}>Episodes {episodes && episodes.length}</NavLink>
     </Card>
   ) 
 }

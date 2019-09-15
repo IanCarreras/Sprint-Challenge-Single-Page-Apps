@@ -44,7 +44,8 @@ export default function CharacterList() {
     <section>
       {
         characterList.map(character => {
-          const { id, image, name, status, location, origin } = character
+          console.log(character)
+          const { id, image, name, status, location, origin, episode } = character
           return <CharacterCard
                     key={id}
                     id={id}
@@ -52,7 +53,8 @@ export default function CharacterList() {
                     name={name}
                     status={status}
                     location={location.name}
-                    origin={origin.name} />
+                    origin={origin.name}
+                    episodes={episode} />
         })
       }
       <div className='button-wrapper'>

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
 
 import EpisodeCard from './EpisodeCard'
+
+const Wrapper = styled.div`
+    width: 80%;
+    text-align: center;
+`
 
 export default function CharacterEpisodes(props) {
     const [episodeIds, setEpisodeIds] = useState()
@@ -18,12 +24,12 @@ export default function CharacterEpisodes(props) {
             .catch(err => {
                 return err.response
             })
-    }, [])
+    }, [props.match.params.id])
     
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/episode/${episodeIds}`)
             .then(res => {
-                return setEpisodes(res.data)
+                return (typeof res.data.length === 'number') ? setEpisodes(res.data) : setEpisodes([res.data])
             })
             .catch(err => {
                 return err.response
@@ -33,10 +39,10 @@ export default function CharacterEpisodes(props) {
     return (
         <section>
             {character && 
-                <div>
-                    <h1>{character.name}'s Episode List</h1>
+                <Wrapper>
+                    <h1>{character.name}'s Episode List ({episodes && episodes.length})</h1>
                     <img src={character.image} alt={`pic of ${character.name}`}/>
-                </div>
+                </Wrapper>
             }
             {episodes &&
                 episodes.map(location => {
