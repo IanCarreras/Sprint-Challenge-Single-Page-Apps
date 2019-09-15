@@ -15,7 +15,7 @@ export default function EpisodeCard({ name, episode, air_date, characters }) {
         <h2>{name}</h2>
         <p>Episode: {episode}</p>
         <p>Aired: {air_date}</p>
-        <p className='characters'>{characters.length}</p>
+        <p className='characters'>{characters.length} characters</p>
     </Card>
   )
 }

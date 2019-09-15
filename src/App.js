@@ -7,6 +7,7 @@ import WelcomPage from './components/WelcomePage'
 import CharacterList from './components/CharacterList'
 import LocationList from './components/LocationsList'
 import EpisodeList from './components/EpisodeList'
+import CharacterEpisodes from './components/CharacterEpisodes'
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
       <Route exact path='/' component={WelcomPage} />
       <Route path='/characters' component={CharacterList} />
       <Route path='/locations' component={LocationList} />
-      <Route path='/episodes' component={EpisodeList} />
+      <Route path='/episodes_list' component={EpisodeList} />
+      <Route exact path='/episodes/:id' component={CharacterEpisodes} />
     </main>
   );
 }

@@ -72,7 +72,15 @@ section {
   padding-top: .4rem;
 }
 
+.button-wrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
 button {
-  width: 10rem;
+  margin-left: 1rem;
+  width: 8rem;
   height: 2rem;
 }

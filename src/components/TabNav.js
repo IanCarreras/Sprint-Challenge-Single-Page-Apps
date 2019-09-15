@@ -20,7 +20,7 @@ export default function TabNav() {
             <NavLink className='navlink' activeClassName='active' to='/locations' >
                 Locations
             </NavLink>
-            <NavLink className='navlink' activeClassName='active' to='/episodes' >
+            <NavLink className='navlink' activeClassName='active' to='/episodes_list' >
                 Episodes
             </NavLink>
         </Menu>

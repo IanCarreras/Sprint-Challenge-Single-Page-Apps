@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Card = styled.div`
@@ -12,14 +13,15 @@ const Card = styled.div`
 `
 
 export default function CharacterCard(props) {
-  const { name, image, location, origin, status } = props
+  const { id, name, image, location, origin, status } = props
   return (
     <Card>
       <img src={image} alt={`pic of ${name}`} />
+      <h1>{name}</h1>
       <p>{status}</p>
       <p>Location: {location}</p>
       <p>Origin: {origin}</p>
-      <p>Episodes</p>
+      <NavLink to={`/episodes/${id}`}>Episodes</NavLink>
     </Card>
   ) 
 }

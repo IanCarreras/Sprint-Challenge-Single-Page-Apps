@@ -47,6 +47,7 @@ export default function CharacterList() {
           const { id, image, name, status, location, origin } = character
           return <CharacterCard
                     key={id}
+                    id={id}
                     image={image}
                     name={name}
                     status={status}
@@ -54,7 +55,7 @@ export default function CharacterList() {
                     origin={origin.name} />
         })
       }
-      <div>
+      <div className='button-wrapper'>
         {/* {previous && previous.includes('https') && <button name='previous' onClick={(e) => handleChange(e)}>Previous</button> }
         {next && next.includes('https') && <button name='next' onClick={(e) => handleChange(e)}>Next</button> } */}
         {<button disabled={!(previous && previous.includes('https'))} name='prev' onClick={(e) => handleChange(e)}>Previous</button>}
