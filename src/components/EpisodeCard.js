@@ -9,12 +9,13 @@ const Card = styled.div`
   width: 40%;
 `
 
-export default function LocationCard({ name, type, dimension, residents }) {
+export default function EpisodeCard({ name, episode, air_date, characters }) {
   return (
     <Card>
-      <h2>{name}</h2>
-      <h4>{type} - {dimension}</h4>
-      <div className='residents'>{residents.length} residents</div>
+        <h2>{name}</h2>
+        <p>Episode: {episode}</p>
+        <p>Aired: {air_date}</p>
+        <p className='characters'>{characters.length}</p>
     </Card>
   )
 }
